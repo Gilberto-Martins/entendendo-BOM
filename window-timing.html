@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Timing</title>
+</head>
+<body>
+    <!--Espera 3 segundos para executar a minhaFuncao()-->
+    <p>Clique e após 3 segundos veja o que acontece</p>
+    <button type="button" onclick="tempo = setTimeout(minhaFuncao1, 3000)">clique aqui</button>
+
+    <!--Se quiser cancelar a execução da minhaFuncao()-->
+    <p>Clique para encerrar a contagem</p>
+    <button type="button" onclick="clearTimeout(tempo)">clique aqui</button>
+
+    <!--
+    <hr>
+    O script iniciou este relógio nesta página: <p id="demo"></p>
+    <button onclick="clearInterval(contador)">Parar contador</button>
+    -->
+
+
+    <script>
+       
+        function minhaFuncao1() {
+            alert("Olá usuário!")
+        }
+
+        
+        var contador = setInterval(timer, 1000)
+
+        function timer() {
+            var d = new Date()
+
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString()
+        }
+    </script>
+</body>
+</html>
