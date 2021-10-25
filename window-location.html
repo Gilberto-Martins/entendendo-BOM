@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Location</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="novoDoc" type="button">Carregar novo documento</button>
+
+    <script>
+        let urlAtual = location.href;   //exibe a URL da Pagia atual
+        let hostAtual = location.hostname;  //retonra o nome do host da pagina atual
+        let pathAtual = location.pathname;  //retorna o nome do caminho da pagina atual
+        let protocoloAtual = location.protocol;  //retorna o protocolo da web da pagina atual
+        let portaAtual = location.port; //retona o numero da porta do host da internet da pagina atual
+
+        document.getElementById("demo").innerHTML = "URL atual: "+ urlAtual+ "<br><br>"+
+        "Host atual: "+hostAtual+"<br><br>"+"O nomedo path atual: "+pathAtual+"<br><br>"+
+        "Protocolo da pagina atual: "+protocoloAtual+"<br><br>"+"Porta: "+portaAtual+"<br><br>"
+
+        function novoDoc() {
+            location.assign("https://www.google.com/");
+        }
+    </script>
+</body>
+</html>
