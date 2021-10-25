@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Screen</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let h = screen.height;
+        let w = screen.width;
+        let ah = screen.availHeight;
+        let aw = screen.availWidth;
+        let cd = screen.colorDepth;
+        let pd = screen.pixelDepth;
+
+        document.getElementById("demo").innerHTML =
+        "Altura da tela: "+h+"<br>"+
+        "Largura da tela: "+w+"<br>"+
+        "Altura disponivel da tela: "+ah+"<br>"+
+        "Largura disponivel da tela: "+aw+"<br>"+
+        "Profundidade da cor da tela: "+cd+"<br>"+
+        "Profundidade de pixels da tela: "+pd+"<br>"
+    </script>
+</body>
+</html>
