@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Size</title>
+</head>
+<body>
+    <button onclick="abriPopUp()" type="button">Abri Janela</button>
+    <button onclick="fecharPopUp()" type="button">Fechar Janela</button>
+    <button onclick="imprimirPopUp()" type="button">Imprimir Janela</button>
+
+    <script>
+        var janelaPopUp;
+
+        function abriPopUp(){
+            janelaPopUp = window.open('https://www.google.com/','google','widht = 500, height = 300');
+        }
+        function fecharPopUp(){
+            try{
+                janelaPopUp.close();
+            }catch(error){
+                console.log("Não da para fechar janela que não esta aberta.");
+            }
+        }
+        function imprimirPopUp() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
